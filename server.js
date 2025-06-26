@@ -4,7 +4,6 @@ const fs = require('fs');
 const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 const videosFolder = path.join(__dirname, 'api');
 
 app.use(cors());
@@ -58,6 +57,4 @@ app.get('/video-anime', async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
-  console.log(`🚀 Server chạy tại http://localhost:${PORT}`);
-});
+module.exports = app;
